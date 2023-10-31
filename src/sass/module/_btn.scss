@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.btn {
+  font-size: rem(14);
+  line-height: calc(22 / 14);
+  color: $white;
+  font-family: $font-gotu;
+  display: inline-block;
+  min-width: rem(202);
+  background-color: $green;
+  border: rem(1) solid $green;
+  padding: rem(15);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: rem(4);
+  left: rem(4);
+  width: 100%;
+  height: 100%;
+  border: rem(1) solid $green;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.btn:hover {
+  @include mq(md) {
+    color: $green;
+  }
+}
+
+.btn:hover::after {
+  @include mq(md) {
+    transform: scale(1, 1);
+    background-color: $white;
+  }
+}
+
+.btn span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.btn span::after {
+  content: '';
+  width: rem(46);
+  height: rem(8);
+  background: url(../images/common/btn_arrow.svg) no-repeat center/contain;
+  margin-left: rem(4);
+  transform: translate(#{rem(3)}, #{rem(-2)});
+}
+
+.btn:hover span::after {
+  @include mq(md) {
+    background: url(../images/common/btn_arrow_hover.svg) no-repeat center/contain;
+  }
+}

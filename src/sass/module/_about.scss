@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.about__wrap {
+  position: relative;
+}
+
+.about__images {
+  display: flex;
+  margin-top: rem(28);
+  position: relative;
+  @include mq(md) {
+    margin-top: rem(37);
+  }
+}
+
+.about__images::after {
+  @include mq(md) {
+    content: '';
+    position: absolute;
+    right: calc(50% - min(50vw, #{rem(637)}));
+    bottom: rem(-92);
+    background: url(../images/top/about_bg-illust.svg) no-repeat center/contain;
+    width: rem(194);
+    height: rem(181);
+  }
+}
+
+.about__img-left {
+  width: calc(400 / 1080 * 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.about__img-left img {
+  aspect-ratio: 400 / 606;
+  object-fit: cover;
+  width: 100%;
+}
+
+.about__img-right {
+  width: calc(880 / 1080 * 100%);
+  margin-top: rem(26);
+  margin-left: rem(-64);
+  position: relative;
+  @include mq(md) {
+    margin-top: rem(80);
+    margin-left: rem(-200);
+  }
+}
+
+.about__img-right img {
+  aspect-ratio: 880 / 581;
+  object-fit: cover;
+  width: 100%;
+}
+
+.about__content {
+  margin-top: rem(40);
+  @include mq(md) {
+    position: absolute;
+    top: 48.6%;
+    left: 57.4%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    width: calc(840 / 1080 * 100%);
+    margin-top: rem(-3);
+  }
+}
+
+.about__sub-title {
+  flex-shrink: 0;
+}
+
+.about__sub-title h3 {
+  font-size: rem(40);
+  font-weight: $regular;
+  line-height: 1;
+  font-family: $font-gotu;
+  color: $green;
+  @include mq(md) {
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+    color: $white;
+  }
+}
+
+.about__body {
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: rem(40);
+  }
+}
+
+.about__text p {
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(24 / 16);
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.about__btn {
+  margin-top: rem(50);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(39);
+  }
+}

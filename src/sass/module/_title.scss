@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.title {
+  font-size: rem(32);
+  font-weight: $normal;
+  line-height: 1;
+  font-family: $font-gotu;
+  text-align: center;
+  position: relative;
+  padding-bottom: rem(28);
+  @include mq(md) {
+    font-size: rem(40);
+  }
+}
+
+.title.title--white {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.title.title--lg {
+  font-size: rem(80);
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: .25);
+  @include mq(md) {
+    text-shadow: none;
+    letter-spacing: .01em;
+  }
+}
+
+.title::first-letter {
+  color: $green;
+}
+
+.title.title--white::first-letter {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.title::after {
+  content: attr(data-jp);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: calc(18 / 12);
+  color: $green;
+}
+
+.title.title--white::after {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.title.title--lg::after {
+  bottom: rem(14);
+  @include mq(md) {
+    bottom: rem(16);
+  }
+}

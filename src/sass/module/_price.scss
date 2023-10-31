@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.price {
+  background-color: $light-green;
+  padding: rem(86) 0 rem(85);
+  @include mq(md) {
+    padding: rem(100) 0 rem(104);
+  }
+}
+
+.price__inner {
+  position: relative;
+}
+
+.price__inner::before {
+  @include mq(md) {
+    content: '';
+    position: absolute;
+    bottom: rem(-42);
+    left: rem(-55);
+    width: rem(437);
+    height: rem(201);
+    background: url(../images/top/price_bg-illust.svg) no-repeat center/contain;
+  }
+}
+
+.price__content {
+  display: grid;
+  margin-top: rem(25);
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(95);
+    margin-top: rem(38);
+  }
+}
+
+.price__items {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.price__item:nth-child(n+2) {
+  margin-top: rem(43);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.price__img {
+  order: -1;
+  position: relative;
+  @include mq(md) {
+    order: initial;
+  }
+}
+
+.price__img .is-img-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: $green;
+}
+
+.price__img img {
+  aspect-ratio: 345 / 227;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    aspect-ratio: 492 / 746;
+  }
+}
+
+.price__btn {
+  margin-top: rem(41);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(78);
+  }
+}

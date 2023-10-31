@@ -1,0 +1,139 @@
+@use "global" as *;
+
+.footer {
+  padding-top: rem(48);
+  padding-bottom: rem(56);
+  background-color: $green;
+  color: $white;
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+}
+
+.footer__logo {
+  max-width: rem(120);
+  @include mq(md) {
+    max-width: rem(200);
+  }
+}
+
+.footer__logo img {
+  aspect-ratio: 120 / 45;
+  object-fit: contain;
+  width: 100%;
+}
+
+.footer__head {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer__sns {
+  display: flex;
+  align-items: center;
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(32);
+    margin-left: rem(40);
+  }
+}
+
+.footer__sns a {
+  width: rem(24);
+  height: rem(24);
+  @include mq(md) {
+    width: rem(32);
+    height: rem(32);
+  }
+}
+
+.footer__sns a:nth-child(n+2) {
+  margin-left: rem(16);
+}
+
+.footer__sns a > img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  width: 100%;
+}
+
+.footer__content {
+  margin-top: rem(40);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include mq(md) {
+    margin-top: rem(24);
+  }
+}
+
+.footer__links-wrap {
+  @include mq(md) {
+    column-count: 2;
+  }
+}
+
+.footer__links-wrap:nth-child(n+2) {
+  margin-left: rem(12);
+  @include mq(md) {
+    margin-left: rem(16);
+  }
+}
+
+.footer__links:nth-child(n+2) {
+  margin-top: rem(40);
+}
+
+.footer__links.footer__links--ml {
+  @include mq(md) {
+    margin-left: rem(8);
+  }
+}
+
+.footer__links li {
+  padding-left: rem(22);
+  line-height: 1;
+  position: relative;
+}
+
+.footer__links li:first-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: url(../images/common/footer_list-icon.svg) no-repeat center/contain;
+  width: rem(18);
+  height: rem(18);
+}
+
+.footer__links li:nth-child(n+2) {
+  margin-top: rem(24);
+}
+
+.footer__links li > a {
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(18 / 16);
+}
+
+.footer__links li:first-child > a {
+  font-weight: $bold;
+}
+
+.footer__copy {
+  font-size: rem(12);
+  line-height: 1;
+  font-family: $font-gotu;
+  margin-top: rem(44);
+  margin-left: rem(-1);
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(14);
+    margin-top: rem(63);
+  }
+}

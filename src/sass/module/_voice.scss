@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.voice__inner {
+  position: relative;
+}
+
+.voice__inner::before {
+  @include mq(md) {
+    content: '';
+    position: absolute;
+    top: rem(-120);
+    left: calc(50% - #{rem(470)});
+    transform: translateX(-50%);
+    width: rem(301);
+    height: rem(138);
+    background: url(../images/top/voice_bg-illust.svg) no-repeat center/contain;
+  }
+}
+
+.voice__inner::after {
+  @include mq(md) {
+    content: '';
+    position: absolute;
+    right: rem(24);
+    bottom: rem(-71);
+    width: rem(71);
+    height: rem(162);
+    background: url(../images/top/voice_bg-illust2.svg) no-repeat center/contain;
+  }
+}
+
+.voice__cards {
+  display: grid;
+  margin-top: rem(42);
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(40);
+    margin-top: rem(29);
+  }
+}
+
+.voice__card:nth-child(n+2) {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.voice__btn {
+  margin-top: rem(40);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

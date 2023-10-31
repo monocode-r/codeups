@@ -1,0 +1,89 @@
+@use "global" as *;
+
+.info {
+  background-color: $light-green;
+  padding-top: rem(83);
+  padding-bottom: rem(84);
+  @include mq(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(76);
+  }
+}
+
+.info__title {
+  text-align: center;
+}
+
+.info__content {
+  margin-top: rem(26);
+  @include mq(md) {
+    margin-top: rem(39);
+    display: flex;
+    align-items: center;
+  }
+}
+
+.info__img {
+  position: relative;
+  @include mq(md) {
+    flex-shrink: 0;
+    width: 50%;
+  }
+}
+
+.info__img .is-img-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: $green;
+}
+
+.info__img img {
+  aspect-ratio: 540 / 356;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.info__body {
+  margin-top: rem(28);
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: rem(48);
+  }
+}
+
+.info__sub-title h3 {
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: 1;
+  transform: translateY(#{rem(0)});
+  @include mq(md) {
+    font-size: rem(24);
+    transform: translateY(#{rem(-4)});
+  }
+}
+
+.info__text {
+  margin-top: rem(4);
+  padding-top: rem(8);
+  border-top: rem(1) solid $green;
+}
+
+.info__text p {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+}
+
+.info__btn {
+  margin-top: rem(38);
+  text-align: center;
+  transform: translateX(#{rem(-2)});
+  @include mq(md) {
+    margin-top: rem(39);
+    transform: translateX(#{rem(-3)});
+  }
+}

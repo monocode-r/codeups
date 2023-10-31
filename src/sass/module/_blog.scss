@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.blog {
+  position: relative;
+  padding-top: rem(84);
+  @include mq(md) {
+    padding-top: rem(100);
+  }
+}
+
+.blog::before {
+  @include mq(md) {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(500 / 831 * 100%);
+    background: url(../images/top/blog_bg-img.webp) no-repeat center/cover;
+  }
+}
+
+.blog::after {
+  @include mq(md) {
+    content: '';
+    position: absolute;
+    top: rem(24);
+    left: calc(50% - #{rem(621)});
+    width: rem(437);
+    height: rem(201);
+    background: url(../images/top/blog_bg-illust.svg) no-repeat center/contain;
+  }
+}
+
+.blog__inner.inner {
+  position: relative;
+  padding-left: rem(20);
+  padding-right: rem(20);
+  @include mq(md) {
+    padding-left: rem(25);
+    padding-right: rem(25);
+  }
+}
+
+.blog__cards {
+  margin-top: rem(26);
+  @include mq(md) {
+    margin-top: rem(78);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(40);
+  }
+}
+
+.blog__card:nth-child(n+2) {
+  margin-top: rem(42);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.blog__btn {
+  margin-top: rem(38);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
