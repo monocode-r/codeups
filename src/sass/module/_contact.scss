@@ -24,13 +24,13 @@
   content: '';
   position: absolute;
   top: rem(-3);
-  right: calc(50% - 46.6vw);
+  right: rem(-1);
   background: url(../images/common/contact_bg-illust.png) no-repeat center/contain;
   width: rem(112);
   height: rem(55);
   @include mq(md) {
     top: rem(-39);
-    right: calc(50% - 46.8vw);
+    right: calc(50% - min(50vw, #{rem(673)}));
     width: rem(309);
     height: rem(148);
   }
@@ -72,7 +72,7 @@
   }
 }
 
-.contact__name h2 {
+.contact__name p {
   margin-right: auto;
   margin-left: auto;
   width: calc(192 / 295 * 100%);
@@ -85,7 +85,7 @@
 .contact__name img {
   aspect-ratio: 174 / 65;
   object-fit: contain;
-  width: 100%;
+  width: rem(174);
   height: auto;
 }
 

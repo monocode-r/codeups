@@ -34,11 +34,11 @@
 }
 
 .hamburger.is-open span:nth-child(1) {
-  transform: translateY(#{rem(12)}) rotate(-315deg);
+  transform: translateY(#{rem(12)}) rotate(-45deg);
 }
 .hamburger.is-open span:nth-child(2) {
   opacity: 0;
 }
 .hamburger.is-open span:nth-child(3) {
-  transform: translateY(#{rem(-12)}) rotate(315deg);
+  transform: translateY(#{rem(-12)}) rotate(45deg);
 }

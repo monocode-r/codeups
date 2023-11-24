@@ -34,11 +34,11 @@
 
 .blog__inner.inner {
   position: relative;
-  padding-left: rem(20);
-  padding-right: rem(20);
+  padding-left: 20px;
+  padding-right: 20px;
   @include mq(md) {
-    padding-left: rem(25);
-    padding-right: rem(25);
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 
@@ -50,6 +50,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: rem(40);
   }
+}
+
+.blog__card a {
+  transition: .3s;
+}
+
+.blog__card a:hover {
+  opacity: .7;
 }
 
 .blog__card:nth-child(n+2) {

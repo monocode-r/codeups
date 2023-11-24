@@ -9,7 +9,7 @@
     content: '';
     position: absolute;
     top: rem(-120);
-    left: calc(50% - #{rem(470)});
+    left: calc(50% - min(36vw, #{rem(470)}));
     transform: translateX(-50%);
     width: rem(301);
     height: rem(138);
@@ -36,6 +36,17 @@
     grid-template-columns: repeat(2, 1fr);
     gap: rem(40);
     margin-top: rem(29);
+  }
+}
+
+.voice__card {
+  max-width: rem(500);
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(md) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 

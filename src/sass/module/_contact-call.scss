@@ -1,15 +1,15 @@
 @use "global" as *;
 
-.contact-call__title p {
+.contact-call__text {
   font-size: rem(14);
   font-weight: 400;
   line-height: calc(18 / 14);
   color: $green;
   text-align: center;
-  margin-top: rem(-8);
+  margin-top: rem(8);
   text-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: .25);
   @include mq(md) {
-    margin-top: rem(-10);
+    margin-top: rem(10);
     text-shadow: none;
   }
 }

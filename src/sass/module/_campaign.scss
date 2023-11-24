@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.campaign {
-  overflow: hidden;
-}
-
 .campaign__content {
   margin-top: rem(26);
   margin-right: calc(50% - 50vw);
@@ -15,14 +11,27 @@
 
 .campaign__swiper.swiper {
   padding-left: rem(4);
-  padding-bottom: rem(4);
+  padding-bottom: rem(10);
   margin-left: rem(-4);
 }
 
 .campaign__swiper .swiper-slide {
   @include mq(md) {
     width: rem(390);
-    // height: rem(450);
+    height: auto;
+  }
+}
+
+.campaign__swiper .swiper-slide a {
+  @include mq(md) {
+    transition: .3s;
+    display: block;
+  }
+}
+
+.campaign__swiper .swiper-slide a:hover {
+  @include mq(md) {
+    opacity: .7;
   }
 }
 
@@ -52,12 +61,12 @@
 
 .campaign__arrow .swiper-button-prev::after {
 
-  background: url(../images/common/icon_arrow-prev.svg) no-repeat center/contain;
+  background: url(../images/top/icon_arrow-prev.svg) no-repeat center/contain;
 
 }
 
 .campaign__arrow .swiper-button-next::after {
-  background: url(../images/common/icon_arrow-next.svg) no-repeat center/contain;
+  background: url(../images/top/icon_arrow-next.svg) no-repeat center/contain;
 }
 
 .campaign__btn {

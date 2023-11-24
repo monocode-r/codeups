@@ -97,12 +97,21 @@ jQuery(function ($) {
     });
   });
 
-  // ハンバーガーメニュー
-  $(document).ready(function () {
-    $(".js-hamburger").click(function () {
-      $(this).toggleClass("is-open");
-      $('.nav').toggleClass("is-open");
-      $('body').toggleClass("is-open");
+  $(document).ready(function() {
+    let $toggleBtn = $('.js-hamburger');
+    let $toggleMenu = $('.nav');
+
+    $toggleBtn.click(function(){
+      $toggleBtn.toggleClass('is-open');
+      $toggleMenu.toggleClass('is-open');
+      if($toggleMenu.hasClass('is-open')) {
+        $('body').css('overflow', 'hidden');
+      } else {
+        $('body').css('overflow', '');
+      }
+    });
+    $toggleMenu.on('click', 'a', function(event){
+      event.preventDefault();
     });
   });
 

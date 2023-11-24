@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.title2 {
+  text-align: center;
+}
+
+.title2__main {
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: calc(18 / 12);
+  color: $green;
+  position: relative;
+  margin-top: rem(2);
+}
+
+.title2__sub-title {
+  font-size: rem(32);
+  font-weight: $normal;
+  line-height: calc(40 / 32);
+  font-family: $font-gotu;
+  @include mq(md) {
+    font-size: rem(40);
+  }
+}
+
+.title2__sub-title::first-letter {
+  color: $green;
+}
+
+.title2.title2--white .title2__main,
+.title2.title2--white .title2__sub-title,
+.title2.title2--white .title2__sub-title::first-letter {
+  color: $white;
+}
+
+.title2.title2--lg .title2__sub-title {
+  font-size: rem(80);
+  line-height: 1;
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: .25);
+  @include mq(md) {
+    text-shadow: none;
+  }
+}
+
+.title2.title2--lg .title2__main {
+  margin-top: rem(-9);
+}
