@@ -17,7 +17,7 @@
   @include mq(md) {
     content: '';
     position: absolute;
-    right: calc(50% - min(50vw, #{rem(637)}));
+    right: calc(50% - min(48vw, #{rem(637)}));
     bottom: rem(-92);
     background: url(../images/top/about_bg-illust.svg) no-repeat center/contain;
     width: rem(194);

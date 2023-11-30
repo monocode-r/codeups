@@ -1,14 +1,5 @@
 @use "global" as *;
 
-.contact {
-  padding-top: rem(56);
-  padding-bottom: rem(78);
-  @include mq(md) {
-    padding-top: rem(140);
-    padding-bottom: rem(160);
-  }
-}
-
 .contact__content {
   padding: rem(25);
   position: relative;
@@ -39,6 +30,8 @@
 .contact__body {
   @include mq(md) {
     width: calc(440 / 918 * 100%);
+    max-width: rem(440);
+    flex-grow: 1;
   }
 }
 
@@ -87,6 +80,7 @@
   object-fit: contain;
   width: rem(174);
   height: auto;
+  margin: auto;
 }
 
 .contact__call {
