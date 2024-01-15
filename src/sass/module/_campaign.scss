@@ -26,6 +26,7 @@
   @include mq(md) {
     transition: .3s;
     display: block;
+    height: 100%;
   }
 }
 
@@ -71,6 +72,7 @@
 
 .campaign__btn {
   margin-top: rem(38);
+  padding-bottom: rem(8);
   text-align: center;
   @include mq(md) {
     margin-top: rem(78);

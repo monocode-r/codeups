@@ -3,11 +3,9 @@
 .title {
   font-size: rem(32);
   font-weight: $normal;
-  line-height: 1;
+  line-height: 1.4;
   font-family: $font-gotu;
   text-align: center;
-  position: relative;
-  padding-bottom: rem(28);
   @include mq(md) {
     font-size: rem(40);
   }
@@ -40,14 +38,13 @@
 
 .title::after {
   content: attr(data-jp);
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: rem(12);
   font-weight: $normal;
   line-height: calc(18 / 12);
   color: $green;
+  display: block;
+  text-align: center;
+  margin-top: rem(8);
 }
 
 .title.title--white::after {

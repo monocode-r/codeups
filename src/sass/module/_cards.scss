@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.cards {
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(40);
+  }
+}
+
+.cards a {
+  transition: .3s;
+}
+
+.cards a:hover {
+  opacity: .7;
+}

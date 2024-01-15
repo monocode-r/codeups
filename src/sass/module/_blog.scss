@@ -46,19 +46,10 @@
   margin-top: rem(26);
   @include mq(md) {
     margin-top: rem(78);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: rem(40);
   }
 }
 
-.blog__card a {
-  transition: .3s;
-}
 
-.blog__card a:hover {
-  opacity: .7;
-}
 
 .blog__card:nth-child(n+2) {
   margin-top: rem(42);
