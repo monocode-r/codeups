@@ -1,17 +1,14 @@
 @use "global" as *;
 
 .price-item__title {
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.4;
   padding-bottom: rem(4);
   border-bottom: rem(1) solid $green;
 }
 
-.price-item__title h3 {
-  font-size: rem(16);
-  font-weight: $bold;
-  line-height: 1.4;
-}
-
-.price-item__list {
+.price-item__items {
   margin-top: rem(10);
   @include mq(md) {
     margin-top: rem(8);

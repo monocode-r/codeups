@@ -4,7 +4,7 @@
   background-color: $light-green;
   padding: rem(86) 0 rem(85);
   @include mq(md) {
-    padding: rem(100) 0 rem(104);
+    padding: rem(103) 0 rem(104);
   }
 }
 
@@ -24,7 +24,7 @@
   }
 }
 
-.price__content {
+.price__contents {
   display: grid;
   margin-top: rem(25);
   @include mq(md) {

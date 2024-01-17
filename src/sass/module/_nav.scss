@@ -29,17 +29,17 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.nav__links:nth-child(n+2) {
+.nav__items:nth-child(n+2) {
   margin-top: rem(40);
 }
 
-.nav__links li {
+.nav__item {
   padding-left: rem(22);
   line-height: 1;
   position: relative;
 }
 
-.nav__links li:first-child::before {
+.nav__item:first-child::before {
   content: '';
   position: absolute;
   top: 0;
@@ -50,17 +50,17 @@
   height: rem(18);
 }
 
-.nav__links li:nth-child(n+2) {
+.nav__item:nth-child(n+2) {
   margin-top: rem(24);
 }
 
-.nav__links li > a {
+.nav__item a {
   font-size: rem(16);
   line-height: 1;
   font-weight: $regular;
   line-height: calc(18 / 16);
 }
 
-.nav__links li:first-child > a {
+.nav__item:first-child > a {
   font-weight: $bold;
 }

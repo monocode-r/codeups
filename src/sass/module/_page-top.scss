@@ -11,7 +11,7 @@
   }
 }
 
-.page-top span {
+.page-top p {
   width: rem(48);
   height: rem(48);
   border: rem(1) solid $green;
@@ -27,7 +27,7 @@
   }
 }
 
-.page-top span img {
+.page-top p img {
   aspect-ratio: 6 / 28;
   object-fit: contain;
   width: rem(10);

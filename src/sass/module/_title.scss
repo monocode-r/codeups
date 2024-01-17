@@ -1,9 +1,9 @@
 @use "global" as *;
 
-.title {
+.title__main {
   font-size: rem(32);
   font-weight: $normal;
-  line-height: 1.4;
+  line-height: 1;
   font-family: $font-gotu;
   text-align: center;
   @include mq(md) {
@@ -11,13 +11,7 @@
   }
 }
 
-.title.title--white {
-  @include mq(md) {
-    color: $white;
-  }
-}
-
-.title.title--lg {
+.title.title--lg .title__main {
   font-size: rem(80);
   text-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: .25);
   @include mq(md) {
@@ -26,36 +20,44 @@
   }
 }
 
-.title::first-letter {
+.title__main::first-letter {
   color: $green;
 }
 
-.title.title--white::first-letter {
+.title.title--white .title__main::first-letter {
   @include mq(md) {
     color: $white;
   }
 }
 
-.title::after {
-  content: attr(data-jp);
+.title.title--white .title__main {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.title.title--lg .title__main::after {
+  bottom: rem(14);
+  @include mq(md) {
+    bottom: rem(16);
+  }
+}
+
+.title__sub {
   font-size: rem(12);
   font-weight: $normal;
   line-height: calc(18 / 12);
   color: $green;
-  display: block;
   text-align: center;
   margin-top: rem(8);
 }
 
-.title.title--white::after {
-  @include mq(md) {
-    color: $white;
-  }
+.title__sub.title__sub--mt {
+  margin-top: rem(-8);
 }
 
-.title.title--lg::after {
-  bottom: rem(14);
+.title.title--white .title__sub {
   @include mq(md) {
-    bottom: rem(16);
+    color: $white;
   }
 }

@@ -23,7 +23,7 @@
   text-align: center;
 }
 
-.mv__title p {
+.mv__title-main {
   font-size: rem(40);
   line-height: calc(100 / 80);
   letter-spacing: calc(54 / 100 * 1em);
@@ -35,12 +35,12 @@
   }
 }
 
-.mv__title p::after {
+.mv__title-main::after {
   content: '';
   margin-left: -.54em;
 }
 
-.mv__title span {
+.mv__title-sub {
   font-size: rem(20);
   font-weight: $regular;
   line-height: calc(33 / 20);

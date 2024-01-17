@@ -3,7 +3,7 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  var mySwiper = new Swiper('.mv-swiper', {
+  var mySwiper = new Swiper('.js-mv-swiper', {
     // 以下にオプションを設定
     effect: 'fade',
     loop: true,
@@ -13,7 +13,7 @@ jQuery(function ($) {
     },
     speed: 1500
   });
-  var mySwiper2 = new Swiper('.campaign-swiper', {
+  var mySwiper2 = new Swiper('.js-campaign-swiper', {
     loop: true,
     slidesPerView: '1.2',
     spaceBetween: 24,
