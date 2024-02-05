@@ -20,13 +20,13 @@
   flex-direction: column;
   @include mq(md) {
     padding: rem(24) rem(16) rem(40);
-    height: 100%;
   }
 }
 
 .card__body2 {
   @include mq(md) {
     padding: rem(24) rem(24) rem(40);
+    height: 100%;
   }
 }
 
