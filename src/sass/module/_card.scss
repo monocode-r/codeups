@@ -13,13 +13,20 @@
   width: 100%;
 }
 
-.card__body {
+.card__body,
+.card__body2 {
   padding: rem(16) rem(16) rem(24);
   display: flex;
   flex-direction: column;
   @include mq(md) {
     padding: rem(24) rem(16) rem(40);
     height: 100%;
+  }
+}
+
+.card__body2 {
+  @include mq(md) {
+    padding: rem(24) rem(24) rem(40);
   }
 }
 
@@ -114,4 +121,23 @@
     font-size: rem(40);
     margin-left: rem(24);
   }
+}
+
+.card__excerpt {
+  margin-top: rem(24);
+}
+
+.card__excerpt p {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+}
+
+.card__contact {
+  margin: rem(32);
+  color: $green;
+  text-align: center;
+}
+
+.card__btn {
+  margin-top: rem(16);
 }

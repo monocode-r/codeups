@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.pagination {
+  position: relative;
+}
+
+.pagination__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(12);
+}
+
+.pagination__item a {
+  font-weight: bold;
+  line-height: calc(19 / 16);
+  color: $green;
+  display: inline-block;
+  padding: rem(8) rem(14);
+  border: 1px solid $green;
+  @include mq(md) {
+    padding: rem(10) rem(14);
+  }
+}
+
+.pagination__item.is-current a {
+  background-color: $green;
+  color: $white;
+}
+
+.pagination__next,
+.pagination__prev {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - #{rem(174)});
+  transform: translateY(-50%);
+  color: $green;
+  display: inline-block;
+  padding: rem(10) rem(14);
+  border: 1px solid $green;
+  width: rem(39);
+  height: rem(39);
+  @include mq(md) {
+    left: calc(50% - #{rem(240)});
+  }
+}
+
+.pagination__next::before,
+.pagination__prev::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+  width: rem(11);
+  height: rem(12);
+  border-right: 1px solid $green;
+  border-bottom: 1px solid $green;
+  display: block;
+}
+
+.pagination__prev {
+  left: calc(50% + #{rem(132)});
+  @include mq(md) {
+    left: calc(50% + #{rem(200)});
+  }
+}
+
+.pagination__prev::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

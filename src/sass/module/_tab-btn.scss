@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.tab-btn {
+  font-size: rem(14);
+  line-height: calc(22 / 14);
+  color: $green;
+  display: block;
+  min-width: rem(162);
+  padding: rem(5) rem(12);
+  border: 1px solid $green;
+  text-align: center;
+}
+
+.tab-btn.is-active {
+  background-color: $green;
+  color: $white;
+}

@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.bg-fish {
+  position: absolute;
+  top: rem(-23);
+  left: calc(50% - min(30vw, #{rem(300)}));
+  transform: translateX(-50%);
+  background: url(../images/campaign/bg-fish.png) no-repeat center/contain;
+  width: rem(120);
+  height: rem(55);
+  @include mq(md) {
+    top: rem(-70);
+    left: calc(50% - min(35vw, #{rem(470)}));
+    width: rem(301);
+    height: rem(138);
+  }
+}

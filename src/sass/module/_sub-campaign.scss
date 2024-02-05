@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.sub-campaign {
+  position: relative;
+}
+
+.sub-campaign__tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: rem(21);
+  row-gap: rem(16);
+  position: relative;
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    gap: rem(32);
+  }
+}
+
+.sub-campaign__content {
+  margin-top: rem(40);
+}

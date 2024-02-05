@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.cards3 {
+  width: rem(280);
+  margin: auto;
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(40);
+    row-gap: rem(80);
+    width: auto;
+  }
+}
+
+.cards3__content:nth-child(n+2) {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
